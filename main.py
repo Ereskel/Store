@@ -10,7 +10,7 @@ from handlers import router1
 
 async def notify(bot):
     for admin in admins:
-        await bot.send_message(chat_id=admin, text='Мы уличные письки')
+        await bot.send_message(chat_id=admin, text='Бот запущен')
 
 
 logging.basicConfig(level=logging.INFO,
@@ -22,21 +22,6 @@ async def main():
     await notify(bot)
     dp.include_router(router1)
     await dp.start_polling(bot)
-
-
-# async def on_startup_notify(dp: Dispatcher):
-#    for admin in admins:
-#        try:
-#            await dp.bot.send_message(admin, "Бот Запущен и готов к работе")
-
-#        except Exception as err:
-#            logging.exception(err)
-
-
-# async def notify(dp):
-#    print('куку')
-#    for admin in admins:
-#        await dp.bot.send_message(chat_id=admin, text = 'Приветик')
 
 
 if __name__ == "__main__":
