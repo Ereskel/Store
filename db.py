@@ -50,7 +50,7 @@ async def admin_add_staff(id, name, city, amount, description, info, photo):
         await con.commit()
 
 '''
-Как здесь все работает? Здесь должно быть два типа функции. Две функции get_name_dot и 
+Здесь должно быть два типа функции. Две функции get_name_dot и 
 '''
 async def get_name_dot():
     async with aiosqlite.connect('database.db') as con:
